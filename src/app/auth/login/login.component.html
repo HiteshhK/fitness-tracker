@@ -1,0 +1,12 @@
+<section class="signup-form">
+  <form [formGroup]="loginForm" class="d-flex flex-column justify-content-center align-items-center">
+    <mat-form-field>
+      <input type="email" formControlName="email" required matInput placeholder="Your Email">
+    </mat-form-field>
+    <mat-form-field hintLabel="Should be atleast 6 character long">
+      <input type="password" formControlName="password" matInput placeholder="Your password">
+    </mat-form-field>
+    <button mat-raised-button (click)="onSubmit()" color="primary" [disabled]="loginForm.invalid"
+      type="button">Submit</button>
+  </form>
+</section>
